@@ -1,0 +1,42 @@
+{
+  "@@locale": "id",
+  "appName": "Forrest",
+  "@appName": { "description": "Nama aplikasi" },
+
+  "greeting": "Hai, {name}!",
+  "@greeting": {
+    "description": "Sapaan di halaman beranda",
+    "placeholders": { "name": { "type": "String" } }
+  },
+
+  "startFocus": "Mulai Sesi Fokus",
+  "myForest": "Hutan Saya",
+  "statistics": "Statistik",
+  "shop": "Toko",
+  "profile": "Profil",
+
+  "timer": "Timer",
+  "stopwatch": "Stopwatch",
+  "duration": "Durasi",
+  "category": "Kategori",
+  "seedType": "Bibit Pohon",
+  "plantNow": "Tanam Sekarang",
+
+  "sessionComplete": "Pohon Tumbuh!",
+  "sessionFailed": "Pohon Layu",
+  "coinsEarned": "+{coins} Koin",
+  "@coinsEarned": {
+    "placeholders": { "coins": { "type": "int" } }
+  },
+
+  "streak": "Streak",
+  "totalFocus": "Total Fokus",
+  "trees": "Pohon",
+
+  "login": "Masuk",
+  "register": "Daftar",
+  "logout": "Keluar",
+  "email": "Email",
+  "password": "Password",
+  "confirmPassword": "Konfirmasi Password"
+}

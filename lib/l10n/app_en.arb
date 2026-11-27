@@ -1,0 +1,42 @@
+{
+  "@@locale": "en",
+  "appName": "Forrest",
+  "@appName": { "description": "App name" },
+
+  "greeting": "Hi, {name}!",
+  "@greeting": {
+    "description": "Greeting on home screen",
+    "placeholders": { "name": { "type": "String" } }
+  },
+
+  "startFocus": "Start Focus Session",
+  "myForest": "My Forest",
+  "statistics": "Statistics",
+  "shop": "Shop",
+  "profile": "Profile",
+
+  "timer": "Timer",
+  "stopwatch": "Stopwatch",
+  "duration": "Duration",
+  "category": "Category",
+  "seedType": "Tree Seed",
+  "plantNow": "Plant Now",
+
+  "sessionComplete": "Tree Grew!",
+  "sessionFailed": "Tree Withered",
+  "coinsEarned": "+{coins} Coins",
+  "@coinsEarned": {
+    "placeholders": { "coins": { "type": "int" } }
+  },
+
+  "streak": "Streak",
+  "totalFocus": "Total Focus",
+  "trees": "Trees",
+
+  "login": "Login",
+  "register": "Register",
+  "logout": "Logout",
+  "email": "Email",
+  "password": "Password",
+  "confirmPassword": "Confirm Password"
+}
