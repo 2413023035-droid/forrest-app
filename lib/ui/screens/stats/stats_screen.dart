@@ -4,7 +4,6 @@ import 'package:fl_chart/fl_chart.dart';
 import '../../../providers/forest_provider.dart';
 import '../../../providers/shop_provider.dart';
 import '../../../core/utils/date_helper.dart';
-import '../../widgets/tag_chip.dart';
 
 class StatsScreen extends StatelessWidget {
   const StatsScreen({super.key});

@@ -93,7 +93,6 @@ class _ShopScreenState extends State<ShopScreen>
   Widget build(BuildContext context) {
     final shop    = context.watch<ShopProvider>();
     final profile = context.watch<ProfileProvider>().profile;
-    final cs      = Theme.of(context).colorScheme;
 
     return Scaffold(
       appBar: AppBar(

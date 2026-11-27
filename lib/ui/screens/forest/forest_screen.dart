@@ -14,15 +14,11 @@ class ForestScreen extends StatefulWidget {
 }
 
 class _ForestScreenState extends State<ForestScreen> {
-  static const double _tileW = 60.0;
-  static const double _tileH = 40.0;
-
   @override
   Widget build(BuildContext context) {
     final forest  = context.watch<ForestProvider>();
     final profile = context.watch<ProfileProvider>().profile;
     final theme   = profile?.equippedThemeId ?? 'theme_default';
-    final cs      = Theme.of(context).colorScheme;
 
     final bgGradient = _themeGradient(theme);
 

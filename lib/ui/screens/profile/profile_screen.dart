@@ -10,7 +10,6 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final auth    = context.read<AuthProvider>();
     final profile = context.watch<ProfileProvider>().profile;
     final cs      = Theme.of(context).colorScheme;
 

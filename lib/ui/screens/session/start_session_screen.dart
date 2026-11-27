@@ -44,8 +44,7 @@ class _StartSessionScreenState extends State<StartSessionScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final shop    = context.watch<ShopProvider>();
-    final profile = context.watch<ProfileProvider>().profile;
+    final shop = context.watch<ShopProvider>();
     final ownedTreeIds = shop.ownedIds;
 
     return Scaffold(
@@ -61,7 +60,7 @@ class _StartSessionScreenState extends State<StartSessionScreen> {
             SegmentedButton<String>(
               segments: const [
                 ButtonSegment(value: 'timer',     label: Text('Timer'),     icon: Icon(Icons.timer_outlined)),
-                ButtonSegment(value: 'stopwatch', label: Text('Stopwatch'), icon: Icon(Icons.stopwatch_outlined)),
+                ButtonSegment(value: 'stopwatch', label: Text('Stopwatch'), icon: Icon(Icons.av_timer)),
               ],
               selected: {_mode},
               onSelectionChanged: (s) => setState(() => _mode = s.first),
@@ -147,9 +146,9 @@ class _StartSessionScreenState extends State<StartSessionScreen> {
                             textAlign: TextAlign.center,
                           ),
                           if (!owned)
-                            Text(
+                            const Text(
                               '🔒',
-                              style: const TextStyle(fontSize: 10),
+                              style: TextStyle(fontSize: 10),
                             ),
                         ],
                       ),
