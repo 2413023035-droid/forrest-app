@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:fl_chart/fl_chart.dart';
-import '../../providers/forest_provider.dart';
-import '../../providers/shop_provider.dart';
-import '../../core/utils/date_helper.dart';
-import '../widgets/tag_chip.dart';
+import '../../../providers/forest_provider.dart';
+import '../../../providers/shop_provider.dart';
+import '../../../core/utils/date_helper.dart';
+import '../../widgets/tag_chip.dart';
 
 class StatsScreen extends StatelessWidget {
   const StatsScreen({super.key});
@@ -96,9 +96,8 @@ class StatsScreen extends StatelessWidget {
               )
             else
               ...tagData.entries.map((entry) {
-                final tag = shop.tags
-                    .where((t) => t.id == entry.key)
-                    .firstOrNull;
+                final matchingTags = shop.tags.where((t) => t.id == entry.key);
+                final tag = matchingTags.isEmpty ? null : matchingTags.first;
                 final totalSeconds = tagData.values.fold(0, (a, b) => a + b);
                 final ratio = totalSeconds == 0 ? 0.0 : entry.value / totalSeconds;
                 return Padding(

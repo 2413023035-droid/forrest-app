@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../providers/auth_provider.dart';
-import '../../providers/profile_provider.dart';
-import '../../providers/forest_provider.dart';
-import '../../core/constants/app_routes.dart';
-import '../../core/utils/coin_calculator.dart';
-import '../../core/utils/date_helper.dart';
-import '../widgets/tree_widget.dart';
-import '../screens/forest/forest_screen.dart';
-import '../screens/stats/stats_screen.dart';
-import '../screens/shop/shop_screen.dart';
-import '../screens/profile/profile_screen.dart';
+import '../../../providers/auth_provider.dart';
+import '../../../providers/profile_provider.dart';
+import '../../../providers/forest_provider.dart';
+import '../../../core/constants/app_routes.dart';
+import '../../../core/utils/coin_calculator.dart';
+import '../../../core/utils/date_helper.dart';
+import '../../widgets/tree_widget.dart';
+import '../forest/forest_screen.dart';
+import '../stats/stats_screen.dart';
+import '../shop/shop_screen.dart';
+import '../profile/profile_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

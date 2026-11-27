@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../providers/forest_provider.dart';
-import '../../providers/profile_provider.dart';
-import '../../core/utils/grid_calculator.dart';
-import '../../core/utils/date_helper.dart';
-import '../widgets/tree_widget.dart';
+import '../../../providers/forest_provider.dart';
+import '../../../providers/profile_provider.dart';
+import '../../../core/utils/grid_calculator.dart';
+import '../../../core/utils/date_helper.dart';
+import '../../widgets/tree_widget.dart';
 
 class ForestScreen extends StatefulWidget {
   const ForestScreen({super.key});

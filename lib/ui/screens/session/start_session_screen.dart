@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../providers/session_provider.dart';
-import '../../providers/shop_provider.dart';
-import '../../providers/profile_provider.dart';
-import '../../core/constants/app_routes.dart';
-import '../widgets/tree_widget.dart';
-import '../widgets/tag_chip.dart';
+import '../../../providers/session_provider.dart';
+import '../../../providers/shop_provider.dart';
+import '../../../providers/profile_provider.dart';
+import '../../../core/constants/app_routes.dart';
+import '../../widgets/tree_widget.dart';
+import '../../widgets/tag_chip.dart';
 
 class StartSessionScreen extends StatefulWidget {
   const StartSessionScreen({super.key});
