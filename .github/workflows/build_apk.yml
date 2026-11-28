@@ -59,10 +59,7 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
-        run: |
-          flutter build apk --debug \
-            --dart-define=SUPABASE_URL="$SUPABASE_URL" \
-            --dart-define=SUPABASE_ANON_KEY="$SUPABASE_ANON_KEY"
+        run: flutter build apk --debug --dart-define="SUPABASE_URL=$(printf '%s' "$SUPABASE_URL" | tr -d '\r\n ')" --dart-define="SUPABASE_ANON_KEY=$(printf '%s' "$SUPABASE_ANON_KEY" | tr -d '\r\n ')"
 
       - name: 📤 Upload Debug APK
         uses: actions/upload-artifact@v4
@@ -98,15 +95,14 @@ jobs:
       - run: flutter pub get
       - name: 🏗️ Build Release APK
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
-        run: |
-          flutter build apk --release --dart-define=SUPABASE_URL="$SUPABASE_URL" --dart-define=SUPABASE_ANON_KEY="$SUPABASE_ANON_KEY"
+            SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+            SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          run: flutter build apk --release --dart-define="SUPABASE_URL=$(printf '%s' "$SUPABASE_URL" | tr -d '\r\n ')" --dart-define="SUPABASE_ANON_KEY=$(printf '%s' "$SUPABASE_ANON_KEY" | tr -d '\r\n ')"
       - name: 🚀 Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: Forrest ${{ github.ref_name }}
-          body: |
-            ## 🌳 Forrest ${{ github.ref_name }}
-            APK siap install untuk Android 7.0+
-          files: build/app/outputs/flutter-apk/app-release.apk
+            name: Forrest ${{ github.ref_name }}
+            body: |
+              ## 🌲 Forrest ${{ github.ref_name }}
+              APK siap install untuk Android 7.0+
+            files: build/app/outputs/flutter-apk/app-release.apk
